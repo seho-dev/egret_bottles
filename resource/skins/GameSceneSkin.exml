@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameSceneSkin" width="600" height="950" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*" >
+	<w:Declarations>
+		<tween:TweenGroup id="BoxAnimation">
+			<tween:TweenItem target="{box}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-100}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250" ease="circIn">
+					<tween:props>
+						<e:Object x="{-77}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="250" ease="circIn">
+					<tween:props>
+						<e:Object x="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{box0}">
+				<tween:Set>
+				<tween:props>
+					<e:Object x="{-100}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{-77}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{0}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{box1}">
+				<tween:Set>
+				<tween:props>
+					<e:Object x="{-100}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{-77}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{0}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{box2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{552}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{533}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="250" ease="circIn">
+					<tween:props>
+						<e:Object x="{463}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{box3}">
+				<tween:Set>
+				<tween:props>
+					<e:Object x="{552}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{533}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{463}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{box4}">
+				<tween:Set>
+				<tween:props>
+					<e:Object x="{552}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{533}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object x="{463}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image source="gamebg_png" x="0" y="0" locked="true"/>
+	<e:Image id="bg1" source="conveyer_png" x="226.5" y="120" anchorOffsetX="0" width="133.36"/>
+	<e:Image id="bg2" source="conveyer_png" x="226.5" y="-708.79" anchorOffsetX="0" width="133.36"/>
+	<e:Image source="gameui1_png" x="0" y="0"/>
+	<e:Group id="bottleGroup" width="95.84" height="825.76" x="243.98" y="121.21" anchorOffsetY="0" anchorOffsetX="0">
+	</e:Group>
+	<e:Group id="boxGroup" x="0" y="279.78">
+		<ns1:Box id="box" width="146" height="231" x="0" y="0" skinName="Box1Skin" rotation="0.23" type="1"/>
+		<ns1:Box id="box0" width="146" height="231" x="0" y="194.22" skinName="Box2Skin" rotation="0.37" type="2"/>
+		<ns1:Box id="box1" width="146" height="231" x="0" y="417.22" skinName="Box3Skin" type="3"/>
+		<ns1:Box id="box2" width="146" height="231" x="461" y="0" skinName="Box4Skin" type="4"/>
+		<ns1:Box id="box3" width="146" height="231" x="461" y="194.22" skinName="Box5Skin" type="5"/>
+		<ns1:Box id="box4" width="146" height="231" x="461" y="417.22" skinName="Box6Skin" type="6"/>
+	</e:Group>
+	<e:Label id="score" text="0" x="459" y="79" textColor="0x000000"/>
+	<e:Label id="bottlesAll" text="0" x="499" y="126" size="21" textColor="0x000000"/>
+	<e:Group id="gameEndGroup" width="606.06" height="946.97" anchorOffsetX="0" anchorOffsetY="0" x="-3" y="3" locked="true" visible="false">
+		<e:Rect width="600.3" height="945.76" x="6.12" y="1.24" fillColor="0x000000" fillAlpha="0.5" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image source="overpanel_png" x="96.78" y="47.48" anchorOffsetX="0" width="419.45" anchorOffsetY="0" height="345.09"/>
+		<e:Image source="overrole_png" x="193.51" y="392.57"/>
+		<e:Button id="restartButton" label="" x="130.68" y="765.42" enabled="true">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_replay_png" source.down="btn_replay1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Button id="mainmenuButton" label="" x="133" y="844.24">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_start_png" source.down="btn_start1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Label text="分数 :" x="175" y="156" size="53"/>
+		<e:Label id="endScore" text="0" x="343" y="158" size="52"/>
+	</e:Group>
+</e:Skin>
